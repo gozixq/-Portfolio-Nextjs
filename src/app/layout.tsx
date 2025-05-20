@@ -12,7 +12,7 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "Portfolio",
   description: "Awesome app using Next.js",
 };
 
