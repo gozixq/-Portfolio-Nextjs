@@ -16,7 +16,7 @@ export default function HomeClient() {
         <ButtonGradient
           text="Welcome to my portfolio"
           colorFrom="from-fuchsia-500"
-          colorVia="via-rose-400"
+          colorVia="via-rose-200"
           colorTo="to-indigo-500"
           icon={<BsStars />}
         />
