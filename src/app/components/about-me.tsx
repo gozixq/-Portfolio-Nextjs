@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Timeline from './ui/Timeline';
-import { CardSpotlight } from './ui/card-spotlight';
 import Information from './ui/information';
 import ButtonTransition from './ui/ButtonTransition';
 const AboutMe = () => {
@@ -25,7 +24,7 @@ const AboutMe = () => {
 
       {/* Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
-        <CardSpotlight className="h-full w-full flex flex-col justify-between">
+        <div className="h-full w-full flex flex-col justify-between border border-gray-800 rounded-xl p-6">
           <p className="text-xl font-bold relative z-20 mt-2 text-white">Information</p>
           <p className="text-neutral-300 mt-4 relative z-20 text-sm">
             Personal details including birthday, address, language, and education.
@@ -33,9 +32,9 @@ const AboutMe = () => {
           <div className="mt-4 relative z-20">
             <Information />
           </div>
-        </CardSpotlight>
+        </div>
 
-        <CardSpotlight className="h-full w-full flex flex-col justify-between">
+        <div className="h-full w-full flex flex-col justify-between border border-gray-800 rounded-xl p-6">
           <p className="text-xl font-bold relative z-20 mt-2 text-white">Experience</p>
           <p className="text-neutral-300 mt-4 relative z-20 text-sm">
             Hands-on internship and real-world project work at Mapedia and more.
@@ -43,12 +42,12 @@ const AboutMe = () => {
           <div className="mt-4 relative z-20">
             <Timeline />
           </div>
-        </CardSpotlight>
+        </div>
       </div>
 
       {/* Skills Card */}
-      <div className="w-full">
-        <CardSpotlight className="h-fit w-full">
+      <div className="w-full border border-gray-800 rounded-xl p-6">
+        <div className="h-fit w-full">
           <p className="text-xl font-bold relative z-20 mt-2 text-white">Skills</p>
           <p className="text-neutral-300 mt-4 relative z-20 text-sm">
             Proficient in web development, creative coding, IoT, and Deep Learning.
@@ -56,7 +55,7 @@ const AboutMe = () => {
           <div className="mt-4 relative z-20">
             <ButtonTransition />
           </div>
-        </CardSpotlight>
+        </div>
       </div>
     </div>
   </section>
