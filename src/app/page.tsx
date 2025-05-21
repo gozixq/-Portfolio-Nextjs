@@ -9,7 +9,7 @@ import ContactMe from './components/contact-me';
 export default function HomePage() {
   return (
     <>
-      <ScrollSpy />
+        <ScrollSpy />
         <HomeClient />
         <AboutMe />
         <ProjectLists />

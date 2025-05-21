@@ -22,7 +22,6 @@ const AboutMe = () => {
         responsive, and user-friendly web experiences.
       </p>
 
-      {/* Responsive Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
         <div className="h-full w-full flex flex-col justify-between border border-gray-800 rounded-xl p-6">
           <p className="text-xl font-bold relative z-20 mt-2 text-white">Information</p>
@@ -45,7 +44,6 @@ const AboutMe = () => {
         </div>
       </div>
 
-      {/* Skills Card */}
       <div className="w-full border border-gray-800 rounded-xl p-6">
         <div className="h-fit w-full">
           <p className="text-xl font-bold relative z-20 mt-2 text-white">Skills</p>

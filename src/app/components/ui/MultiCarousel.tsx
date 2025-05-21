@@ -29,7 +29,7 @@ interface CarouselItem {
   type: string;
   description: string;
   id: number;
-  icons: { element: React.ReactElement; label: string }[]; // <-- เปลี่ยนจาก icontool
+  icons: { element: React.ReactElement; label: string }[]; 
   responsibility: string;
   link: string;
   image: {
@@ -196,8 +196,6 @@ const projectData: CarouselItem[][] = [
 
 const Card = ({ item, current, setCurrent, total }: CardProps) => (
   <div className="text-white rounded-xl p-4 w-fit h-full shadow-md border border-gray-800  flex flex-col justify-between">
-    
-    {/* Icons */}
     <div className="flex -space-x-3 mb-4">
       {item.icons.map((icon, index) => (
         <div
@@ -212,7 +210,6 @@ const Card = ({ item, current, setCurrent, total }: CardProps) => (
           }}
         >
           <div className="text-sm text-white">{icon.element}</div>
-          {/* Tooltip */}
           <div className="absolute bottom-[-25px] left-1/2 -translate-x-1/2 hidden group-hover:flex bg-gray-900 text-white text-[10px] px-2 py-1 rounded-md shadow-md whitespace-nowrap animate-fade-in z-50">
             {icon.label}
           </div>
@@ -220,7 +217,6 @@ const Card = ({ item, current, setCurrent, total }: CardProps) => (
       ))}
     </div>
 
-    {/* Image */}
     <Image
       key={item.image.id}
       src={item.image.src}
@@ -229,8 +225,6 @@ const Card = ({ item, current, setCurrent, total }: CardProps) => (
       height={120}
       className="w-full h-36 object-cover rounded-md mb-3"
     />
-
-    {/* Title + Description */}
     <h3 className="text-base font-semibold">{item.title}</h3>
     <p className="text-xs text-gray-400 mt-1">{item.description}</p>
 
@@ -242,9 +236,6 @@ const Card = ({ item, current, setCurrent, total }: CardProps) => (
     >
       View <FiExternalLink className="inline-block" />
     </a>
-
-
-    {/* Pagination Dots */}
     <div className="flex justify-center space-x-2 mt-4">
       {Array.from({ length: total }).map((_, i) => (
         <button
@@ -281,38 +272,35 @@ const SingleCarousel = ({ items }: { items: CarouselItem[] }) => {
     trackMouse: true,
   });
 
-return (
-  <div className="flex flex-col items-center" {...handlers}>
-    {/* 👇 แยก Card ออกจาก dot ด้วย div ด้านบน */}
-    <div className="relative w-full h-[400px] overflow-hidden">
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.div
-          key={current}
-          custom={direction}
-          initial={{ x: direction === "left" ? 300 : -300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="absolute w-full h-full"
-        >
-          <Card
-            item={items[current]}
-            current={current}
-            setCurrent={(i: number) =>
-              swipeTo(i, i > current ? "left" : "right")
-            }
-            total={items.length}
-          />
+  return (
+    <div className="flex flex-col items-center" {...handlers}>
+      <div className="relative w-full h-[400px] overflow-hidden">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={current}
+            custom={direction}
+            initial={{ x: direction === "left" ? 300 : -300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: direction === "left" ? -300 : 300, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="absolute w-full h-full"
+          >
+            <Card
+              item={items[current]}
+              current={current}
+              setCurrent={(i: number) =>
+                swipeTo(i, i > current ? "left" : "right")
+              }
+              total={items.length}
+            />
 
-        </motion.div>
-      </AnimatePresence>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
-  </div>
-);
+  );
 
 };
-
-
 
 const MultiCarousel = () => {
   return (

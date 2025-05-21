@@ -7,7 +7,7 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "400", "700"],
   display: "swap",
-  variable: '--font-poppins', // 👈 This makes the CSS variable available
+  variable: '--font-poppins', 
 });
 
 

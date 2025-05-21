@@ -9,7 +9,7 @@ type ButtonGradientProps = {
   colorTo?: string;
   textSize?: string;
   iconSize?: string;
-  icon?: React.ReactNode; // รับ icon เป็น prop
+  icon?: React.ReactNode; 
 };
 
 const ButtonGradient: React.FC<ButtonGradientProps> = ({
@@ -27,12 +27,10 @@ const ButtonGradient: React.FC<ButtonGradientProps> = ({
   return (
     <div className="relative w-[220px] flex justify-center items-center">
       <div className="relative w-full max-w-xs h-10 opacity-90 overflow-hidden rounded-full bg-black z-10 group">
-        {/* แถบ slide */}
         <div
           className={`absolute z-10 -translate-x-44 group-hover:translate-x-[30rem] ease-in transition-all duration-700 h-full w-fit ${gradientSlide} -skew-x-15`}
         />
 
-        {/* ปุ่ม */}
         <div className="absolute flex items-center justify-center text-white z-[1] opacity-90 rounded-full inset-0.5 bg-black">
           <button
             name="text"
@@ -43,7 +41,6 @@ const ButtonGradient: React.FC<ButtonGradientProps> = ({
           </button>
         </div>
 
-        {/* เอฟเฟกต์ Glow */}
         <div
           className={`absolute duration-1000 group-hover:animate-spin w-full h-[80px] ${gradientGlow} blur-[55px]`}
         />

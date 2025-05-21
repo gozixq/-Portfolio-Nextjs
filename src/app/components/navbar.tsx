@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const handleNavClick = (section: string) => {
     scrollToSection(section);
-    setIsMobileMenuOpen(false); // auto close mobile menu
+    setIsMobileMenuOpen(false); 
   };
 
   return (
@@ -47,8 +47,6 @@ const Navbar = () => {
           Contact
         </button>
       </div>
-
-      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button
           onClick={handleToggleMenu}
@@ -58,8 +56,6 @@ const Navbar = () => {
           ☰
         </button>
       </div>
-
-      {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-full right-6 mt-2 w-44 bg-black/80 backdrop-blur-md border border-gray-700 rounded-lg p-4 flex flex-col gap-3 text-white text-sm shadow-xl md:hidden">
           <button onClick={() => handleNavClick('about')} className="hover:text-purple-400 text-left">

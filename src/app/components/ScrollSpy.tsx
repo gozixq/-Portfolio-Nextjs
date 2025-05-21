@@ -20,7 +20,7 @@ const ScrollSpy = () => {
         }
       },
       {
-        threshold: 0.3, // 60% visible ถึงจะนับว่าอยู่บนจอ
+        threshold: 0.3,
       }
     );
 
