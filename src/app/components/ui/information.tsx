@@ -17,7 +17,7 @@ const Information = () => {
     {
       icon: FaBirthdayCake,
       title: "Date of Birth",
-      text: "25 May 2002",
+      text: "5 July 2002",
     },
     {
       icon: FaMapMarkerAlt,
