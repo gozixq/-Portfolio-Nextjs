@@ -113,7 +113,7 @@ const projectData: CarouselItem[][] = [
   {
     title: "Web Design",
     type: "Web Development",
-    description: "Figma design for the Drone image processing system",
+    description: "Figma design for the Drone image processing system, Designed the full of user interface and layout of interactive map.",
     id: 2,
     icons: [
       { element: <SiFigma className="text-white" />, label: "Figma" },
@@ -195,7 +195,7 @@ const projectData: CarouselItem[][] = [
 
 
 const Card = ({ item, current, setCurrent, total }: CardProps) => (
-  <div className="text-white rounded-xl p-4 w-[300px] shadow-md border border-gray-800 h-full flex flex-col justify-between">
+  <div className="text-white rounded-xl p-4 w-fit h-full shadow-md border border-gray-800  flex flex-col justify-between">
     
     {/* Icons */}
     <div className="flex -space-x-3 mb-4">
@@ -227,7 +227,7 @@ const Card = ({ item, current, setCurrent, total }: CardProps) => (
       alt={item.image.alt}
       width={320}
       height={120}
-      className="w-full h-30 object-cover rounded-md mb-3"
+      className="w-full h-36 object-cover rounded-md mb-3"
     />
 
     {/* Title + Description */}
@@ -316,7 +316,7 @@ return (
 
 const MultiCarousel = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
       {projectData.map((projectItems, index) => (
         <SingleCarousel key={index} items={projectItems} />
       ))}
