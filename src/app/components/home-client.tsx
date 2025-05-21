@@ -16,11 +16,11 @@ export default function HomeClient() {
         <ButtonGradient
           text="Welcome to my portfolio"
           colorFrom="from-fuchsia-500"
-          colorVia="via-rose-200"
+          colorVia="via-white"
           colorTo="to-indigo-500"
           icon={<BsStars />}
         />
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-fuchsia-500 via-rose-400 to-indigo-500 bg-clip-text text-transparent">
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-fuchsia-500 via-white/50 to-indigo-500 bg-clip-text text-transparent">
         I&#39;m Natsinee Sasanasopa
       </h1>
       <TypeAnimation
