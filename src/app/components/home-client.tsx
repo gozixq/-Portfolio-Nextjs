@@ -25,7 +25,7 @@ export default function HomeClient() {
       </h1>
       <TypeAnimation
         sequence={[
-          "Frontend Developer & UX/UI Designer",
+          "Fullstack Developer & Software Developer",
         ]}
         speed={50}
         repeat={0}
