@@ -17,8 +17,8 @@ const AboutMe = () => {
 
       <p className="text-gray-300 text-[15px] leading-relaxed">
         Hello! I&#39;m <span className="font-semibold text-white">Natsinee Sasanasopa</span>,
-        a passionate <span className="text-purple-300">Frontend Developer</span> and
-        <span className="text-pink-300"> UX/UI Designer</span> who loves creating beautiful,
+        a passionate <span className="text-purple-300">Fullstack Developer</span> and
+        <span className="text-pink-300">Sotfware Developer</span> who loves creating beautiful,
         responsive, and user-friendly web experiences.
       </p>
 
