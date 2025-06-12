@@ -16,6 +16,12 @@ import {
   SiDocker,
   SiFigma,
   SiLeaflet,
+  SiPostgresql,
+  SiMongodb,
+  SiPrisma,
+  SiPytorch,
+  SiApacheairflow,
+  SiMicrodotblog,
 } from 'react-icons/si';
 
 interface SkillButtonProps {
@@ -51,6 +57,10 @@ const categories = [
   { key: 'uiux', label: 'UI/UX Design' },
   { key: 'tools', label: 'Tools' },
   { key: 'mapping', label: 'Mapping' },
+  { key: 'backend', label: 'Backend' },
+  { key: 'testing', label: 'Testing' },
+  { key: 'aiml', label: 'AI/ML' },
+
 ];
 
 const skills = [
@@ -62,16 +72,21 @@ const skills = [
   { label: 'Angular', icon: <SiAngular />, level: 60, description: 'Google’s component-based frontend framework.', category: 'frontend' },
   { label: 'Next.js', icon: <SiNextdotjs />, level: 85, description: 'React framework for SSR and API routes.', category: 'frontend' },
   { label: 'Vite', icon: <SiVite />, level: 70, description: 'Lightning-fast build tool for frontend dev.', category: 'frontend' },
-
   { label: 'Python', icon: <FaPython />, level: 75, description: 'Backend scripting, automation, and APIs.', category: 'data' },
-
   { label: 'Docker', icon: <SiDocker />, level: 78, description: 'Containerization and consistent environments.', category: 'tools' },
-
   { label: 'Figma', icon: <SiFigma />, level: 82, description: 'Wireframing, UI mockups, and prototyping.', category: 'uiux' },
-
   { label: 'Git', icon: <FaGitAlt />, level: 85, description: 'Version control using Git and GitHub.', category: 'tools' },
-
   { label: 'Leaflet', icon: <SiLeaflet />, level: 65, description: 'Interactive mapping with Leaflet.js.', category: 'mapping' },
+  { label: 'RESTful API', icon: <FaPython />, level: 80, description: 'Design and integration of RESTful services.', category: 'backend' },
+  { label: 'PostgreSQL', icon: <SiPostgresql />, level: 75, description: 'Relational database design and queries.', category: 'backend' },
+  { label: 'MongoDB', icon: <SiMongodb />, level: 70, description: 'NoSQL database experience for flexible schemas.', category: 'backend' },
+  { label: 'Prisma ORM', icon: <SiPrisma />, level: 65, description: 'Type-safe database client for Node.js.', category: 'backend' },
+  { label: 'PyTorch', icon: <SiPytorch />, level: 70, description: 'Deep learning model training and inference.', category: 'aiml' },
+  { label: 'ResNet50', icon: <SiPytorch />, level: 65, description: 'Used for tree counting in aerial imagery.', category: 'aiml' },
+  { label: 'Template Matching', icon: <FaPython />, level: 60, description: 'Computer vision technique for object detection.', category: 'aiml' },
+  { label: 'PySpark', icon: <FaPython />, level: 60, description: 'Distributed data processing using Spark in Python.', category: 'aiml' },
+  { label: 'MicroPython', icon: <SiMicrodotblog />, level: 55, description: 'Python for microcontrollers in IoT projects.', category: 'aiml' },
+  { label: 'Unit Testing', icon: <FaPython />, level: 60, description: 'Writing test cases for code correctness and stability.', category: 'testing' },
 ];
 
 
