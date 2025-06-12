@@ -92,7 +92,7 @@ const skills = [
   return (
     <section className="min-h-[520px] px-4 mt-10 text-white">
       <div className="flex justify-center mb-6">
-        <div className="flex items-center space-x-1 sm:space-x-4 px-2 sm:px-4 py-1 sm:py-2 rounded-full w-fit text-[10px] sm:text-sm">
+        <div className="flex flex-wrap gap-2 sm:gap-4 px-2 sm:px-4 py-1 sm:py-2 rounded-xl w-full text-[10px] sm:text-sm justify-center">
           {categories.map((cat) => (
             <button
               key={cat.key}
