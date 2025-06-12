@@ -20,7 +20,6 @@ import {
   SiMongodb,
   SiPrisma,
   SiPytorch,
-  SiApacheairflow,
   SiMicrodotblog,
 } from 'react-icons/si';
 
